@@ -1,1 +1,1 @@
-ECHO is on.
+DROP TABLE IF EXISTS folders;
