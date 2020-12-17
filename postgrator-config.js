@@ -1,8 +1,9 @@
-require('dotenv').config();
 module.exports = {
 "migrationsDirectory": "migrations",
     "driver": "pg",
-    "connectionString": (process.env.NODE_ENV === 'test') 
-        ? process.env.TEST_DB_URL 
-        : process.env.DB_URL
+    "host": process.env.MIGRATION_DB_HOST || 'localhost',
+    "port": process.env.MIGRATION_DB_PORT || '5433',
+    "database": process.env.MIGRATION_DB_NAME || 'noteful',
+    "username": process.env.MIGRATION_DB_USER || 'postgres',
+    "password": process.env.MIGRATION_DB_PASS    
 }        
