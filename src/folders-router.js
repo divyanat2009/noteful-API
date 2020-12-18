@@ -20,7 +20,7 @@ foldersRouter
         .then(folders => {
             res.json(folders.map(sanitizeFolder))
         })
-        .catch(next)
+        .catch(error=> console.log(error))
     })
     .post(jsonParser, (req, res, next) => {
         const { name } = req.body
@@ -39,7 +39,7 @@ foldersRouter
                     .location(path.posix.join(req.originalUrl, `/${folder.id}`))
                     .json(sanitizeFolder(folder))
             })
-            .catch(next)
+            .catch(error=> console.log(error))
     })
 
 foldersRouter
@@ -53,6 +53,7 @@ foldersRouter
                     })
                 }
                 res.folder = folder
+                
                 next()
             })
     })

@@ -5,21 +5,21 @@ function makeNotesArray() {
             note_name: 'Test Note 1',
             content: 'Test Note 1 Content',
             date_modified: '2019-01-22T16:28:32.615Z',
-            folder_id: 1
+            folderid: 1
         }, 
         {
             note_id: 2,
             note_name: 'Test Note 2',
             content: 'Test Note 2 Content',
             date_modified: '2019-01-22T16:28:32.615Z',
-            folder_id: 2
+            folderid: 2
         },
         {
             note_id: 3,
             note_name: 'Test Note 3',
             content: 'Test Note 3 Content',
             date_modified: '2019-01-22T16:28:32.615Z',
-            folder_id: 1
+            folderid: 1
         },
     ]
 }

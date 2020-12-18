@@ -1,4 +1,4 @@
-INSERT INTO notes (name, folderId, content)
+INSERT INTO notes (name, folderid, content)
 VALUES 
     ('Clean House', 1, 'Unicorn drinking vinegar butcher selfies literally try-hard, af polaroid everyday carry poke vinyl cliche mumblecore. Try-hard waistcoat hot chicken kitsch slow-carb. Locavore shaman waistcoat bushwick banh mi dreamcatcher brunch hell of direct trade flannel literally vegan.'), 
     ('Wholefoods List', 2, 'Lorem ipsum dolor amet prism venmo woke cardigan. Food truck butcher tbh messenger bag skateboard shoreditch helvetica sartorial farm-to-table before they sold out. Sriracha deep v lo-fi, pug shoreditch brooklyn williamsburg PBR&B. Live-edge bushwick vexillologist activated charcoal humblebrag chambray before they sold out messenger bag narwhal everyday carry meditation mumblecore pabst. '), 
