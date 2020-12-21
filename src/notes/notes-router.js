@@ -24,6 +24,7 @@ notesRouter
       .then(notes => {
         res.json(notes.map(serializeNote));
       })
+      console.log("Checking Note Route")
       .catch(next);
   })
   .post(jsonParser, (req, res, next) => {
