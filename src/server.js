@@ -1,5 +1,5 @@
 const knex = require('knex');
-const app = require('./app');
+const App = require('./App');
 const { PORT, DATABASE_URL } = require('./config');
 require('dotenv').config()
 
