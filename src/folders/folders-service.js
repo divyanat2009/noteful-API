@@ -1,38 +1,32 @@
-'use strict';
-
 const FoldersService = {
-  getAllFolders(knex) {
-    return knex.select('*').from('folders');
+  getAllFolders(knex){
+      return knex.select('*').from('noteful_folders');
   },
 
-  insertFolder(knex, newFolder) {
-    return knex
-      .insert(newFolder)
-      .into('folders')
-      .returning('*')
-      .then(rows => {
-        return rows[0];
-      });
+  insertFolder(knex, newFolder){
+      return knex
+          .insert(newFolder)
+          .into('noteful_folders')
+          .returning('*')
+          .then(rows=>{
+              return rows[0]
+          })
   },
 
-  getById(knex, id) {
-    return knex
-      .from('folders')
-      .select('*')
-      .where('id', id)
-      .first();
+  getById(knex,id){
+      return knex.from('noteful_folders').select('*').where('id',id).first()
   },
 
-  deleteFolder(knex, id) {
-    return knex('folders')
+  deleteFolder(knex,id){
+      return knex.from('noteful_folders')
       .where({ id })
-      .delete();
+      .delete()
   },
 
-  updateFolder(knex, id, newFolderFields) {
-    return knex('folders')
-      .where({ id })
-      .update(newFolderFields);
+  updateFolder(knex, id, newFolderFields){
+      return knex('noteful_folders')
+      .where({id})
+      .update(newFolderFields)
   },
 };
 
